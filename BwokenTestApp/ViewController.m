@@ -9,6 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+- (IBAction)universalButtonTapped:(id)sender;
+- (IBAction)iPadButtonTapped:(id)sender;
+- (IBAction)iPhoneButtonTapped:(id)sender;
 
 @end
 
@@ -24,4 +28,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)universalButtonTapped:(id)sender {
+    self.welcomeLabel.text = @"Universal Button Pushed";
+}
+
+- (IBAction)iPadButtonTapped:(id)sender {
+    self.welcomeLabel.text = @"iPad Button Pushed";
+}
+
+- (IBAction)iPhoneButtonTapped:(id)sender {
+    self.welcomeLabel.text = @"iPhone Button Pushed";
+}
 @end

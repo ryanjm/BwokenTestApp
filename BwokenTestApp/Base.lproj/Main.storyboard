@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,99 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-XL-iRe">
+                                <rect key="frame" x="243" y="285" width="114" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="universalButton"/>
+                                <state key="normal" title="Universal Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="universalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xM1-Lf-7h2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8U-QY-xzU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="iPadButton"/>
+                                <state key="normal" title="iPad Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iPadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zSD-vd-txq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vH7-0Q-srB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="iPhoneButton"/>
+                                <state key="normal" title="iPhone Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iPhoneButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rI0-8Y-alP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG1-b9-WQe">
+                                <rect key="frame" x="265" y="256" width="71" height="21"/>
+                                <accessibility key="accessibilityConfiguration" label="welcomeLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t6t-XL-iRe" firstAttribute="top" secondItem="JG1-b9-WQe" secondAttribute="bottom" constant="8" id="2Gq-cr-fOC"/>
+                            <constraint firstItem="t6t-XL-iRe" firstAttribute="top" secondItem="JG1-b9-WQe" secondAttribute="bottom" constant="8" id="320-xG-ytk"/>
+                            <constraint firstItem="N8U-QY-xzU" firstAttribute="top" secondItem="t6t-XL-iRe" secondAttribute="bottom" constant="8" id="89o-53-qSM"/>
+                            <constraint firstItem="vH7-0Q-srB" firstAttribute="top" secondItem="t6t-XL-iRe" secondAttribute="bottom" constant="8" id="EKD-zv-rLg"/>
+                            <constraint firstAttribute="centerX" secondItem="JG1-b9-WQe" secondAttribute="centerX" constant="-0.5" id="KIa-qu-yFr"/>
+                            <constraint firstItem="t6t-XL-iRe" firstAttribute="top" secondItem="JG1-b9-WQe" secondAttribute="bottom" constant="8" id="QJI-mF-cd5"/>
+                            <constraint firstAttribute="centerY" secondItem="t6t-XL-iRe" secondAttribute="centerY" id="bvy-1M-yKn"/>
+                            <constraint firstAttribute="centerX" secondItem="JG1-b9-WQe" secondAttribute="centerX" constant="-0.5" id="d9q-H3-r3d"/>
+                            <constraint firstAttribute="centerX" secondItem="t6t-XL-iRe" secondAttribute="centerX" id="fy1-SZ-kTK"/>
+                            <constraint firstAttribute="centerX" secondItem="vH7-0Q-srB" secondAttribute="centerX" id="tzK-lr-Ocx"/>
+                            <constraint firstAttribute="centerX" secondItem="N8U-QY-xzU" secondAttribute="centerX" constant="-0.5" id="zAQ-Ia-zjx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="N8U-QY-xzU"/>
+                                <exclude reference="vH7-0Q-srB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="89o-53-qSM"/>
+                                <exclude reference="zAQ-Ia-zjx"/>
+                                <exclude reference="EKD-zv-rLg"/>
+                                <exclude reference="tzK-lr-Ocx"/>
+                                <exclude reference="KIa-qu-yFr"/>
+                                <exclude reference="320-xG-ytk"/>
+                                <exclude reference="QJI-mF-cd5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vH7-0Q-srB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EKD-zv-rLg"/>
+                                <include reference="tzK-lr-Ocx"/>
+                                <include reference="KIa-qu-yFr"/>
+                                <include reference="320-xG-ytk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="N8U-QY-xzU"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="89o-53-qSM"/>
+                                <include reference="zAQ-Ia-zjx"/>
+                                <include reference="QJI-mF-cd5"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="JG1-b9-WQe" id="3jr-9W-A96"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
