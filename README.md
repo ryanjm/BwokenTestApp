@@ -6,4 +6,5 @@ Once you have bwoken install running tests is easy:
 
 ```
 bwoken test --simulator --family ipad --device "iPad Air (8.1 Simulator)" --skip-build
+bwoken test --simulator --family iphone --device "iPhone 6 (8.1 Simulator)"
 ```

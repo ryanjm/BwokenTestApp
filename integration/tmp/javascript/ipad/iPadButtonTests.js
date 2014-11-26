@@ -5,8 +5,8 @@ UIALogger.logStart("iPad button works");
 window.buttons()["iPadButton"].tap();
 
 if (window.staticTexts()[0].value() === "iPad Button Pushed") {
-    UIALogger.logPass();
+    UIALogger.logPass("iPad button works");
 }
 else {
-    UIALogger.logFail();
+    UIALogger.logFail("iPad button doesn't work");
 }
