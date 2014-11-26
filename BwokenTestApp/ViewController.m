@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.welcomeLabel.text = @"Welcome";
+    self.welcomeLabel.accessibilityValue = self.welcomeLabel.text; // hack to see text in tests
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,13 +32,16 @@
 
 - (IBAction)universalButtonTapped:(id)sender {
     self.welcomeLabel.text = @"Universal Button Pushed";
+    self.welcomeLabel.accessibilityValue = self.welcomeLabel.text;
 }
 
 - (IBAction)iPadButtonTapped:(id)sender {
     self.welcomeLabel.text = @"iPad Button Pushed";
+    self.welcomeLabel.accessibilityValue = self.welcomeLabel.text;
 }
 
 - (IBAction)iPhoneButtonTapped:(id)sender {
     self.welcomeLabel.text = @"iPhone Button Pushed";
+    self.welcomeLabel.accessibilityValue = self.welcomeLabel.text;
 }
 @end
